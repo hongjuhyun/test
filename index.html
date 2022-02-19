@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio_연습</title>
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+    <div class="menu-tab">
+        <div id="one"></div>
+        <div id="two"></div>
+        <div id="three"></div>
+    </div>
+    <div class="menu-hide">
+        <nav id="nav">
+            <ul id="menu">
+                <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
+                <li data-menuanchor="secondPage"><a href="#secondPage">Menu1</a></li>
+                <li data-menuanchor="3rdPage"><a href="#3rdPage">Menu2</a></li>
+                <li data-menuanchor="4rdPage"><a href="#4rdPage">Menu3</a></li>
+                <li data-menuanchor="5rdPage"><a href="#5rdPage">Menu4</a></li>
+                <li data-menuanchor="6rdPage"><a href="#6rdPage">Menu5</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="fullpage">
+        <section class="section" id="section0">
+            <h2><span id="date"></span>의 포트폴리오를 확인해보세요!</h2>
+            <h1>HONG JU HYUN</h1>
+            <p>PORTFOLIO</p>
+
+            <span class="scroll-btn">
+                <a href="#about">
+                    <span class="mouse">
+                        <span></span>
+                    </span>
+                </a>
+                <p class="text">scroll me</p>
+            </span>
+        </section>
+        <section class="section" id="section1">
+            <h1>Responsive Web Site</h1>
+            <img src="images/work1-thum.jpg" alt="work1">
+            <ul>
+                <li>사이트명 : 이디야</li>
+                <li>구성 : 메인페이지</li>
+                <li>작업기간 : 1주</li>
+                <li>기여도 : 본인 100%</li>
+                <li>사용언어 : HTML, CSS, Javascript</li>
+                <li>사용프로그램 : Figma, VisualStudio</li>
+            </ul>
+            <ul>
+                <li><a href="work1.html" target="_blank">기획서</a></li>
+                <li class="none"><a href="http://test0707.dothome.co.kr/responsive/index.html" target="_blank" onclick="window.open(this.href, '_blank', 'width=420, height=800, top=80, left=400, scrollbars=yes, resizable=yes')">Mobile</a></li>
+                <li class="none"><a href="http://test0707.dothome.co.kr/responsive/index.html" target="_blank" onclick="window.open(this.href, '_blank', 'width=768, height=1024, top=20, left=400, scrollbars=yes, resizable=yes')">Tablet</a></li>
+                <li><a href="http://test0707.dothome.co.kr/responsive/index.html" target="_blank">Site</a></li>
+            </ul>
+        </section>
+        <section class="section" id="section2">
+            <h1>UI/UX 디자인</h1>
+            <img src="images/work3-thum.jpg" alt="work1">
+
+            <div class="info">
+                <div class="buttons">
+                    <p>                        
+                        <a href="" data-modal="#modal2" class="modal__trigger">기획서</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div id="modal2" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <p><img src="images/work3.jpg" alt="" /></p>
+                    
+                    <!-- modal close button -->
+                    <a href="" class="modal__close demo-close">
+                        <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div id="modal3" class="modal modal__bg" role="dialog" aria-hidden="true">
+            <div class="modal__dialog">
+                <div class="modal__content">
+                    <h1>Modal 3</h1>
+                                        
+                    <!-- modal close button -->
+                    <a href="" class="modal__close demo-close">
+                        <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="section" id="section3">
+            <h1>Menu3</h1>
+        </section>
+        <section class="section" id="section4">
+            <h1>Menu4</h1>
+        </section>
+        <section class="section" id="section5">
+            <h1>Menu5</h1>
+        </section>
+
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        //fullpage
+        var myFullpage = new fullpage('#fullpage', {
+            // sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', 'pink', 'hotpink', 'palevioletred'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage', '5rdPage', '6rdPage'],
+            navigation: true,
+            navigationTooltips: ['Home', 'Seciton1', 'Seciton2', 'Seciton3', 'Seciton4', 'Seciton5'],
+            showActiveTooltip: false,
+            menu: '#menu'
+        });
+
+        //Date
+        getDate();
+
+        function getDate() {
+            var result = "";
+            var year = new Date().getFullYear();
+            var month = new Date().getMonth() + 1; //getMonth 메서드는 (0부터 1월을 나타냅니다.)
+            var day = new Date().getDate();
+            result = year + '년 ' + month + '월 ' + day + '일';
+            document.getElementById('date').innerHTML = result;
+        }
+    </script>
+</body>
+</html>
